@@ -1,0 +1,12 @@
+body {
+    /* cor de fundo */
+    background-color: #27A3F5;
+    /* flexbox */
+    display: flex;
+    /* alinhamento na horizontal */
+    justify-content: center;
+    /* alinhamento na vertical */
+    align-items: center;
+    /* ocupa a tela inteira verticalmente */
+    height: 100vh;
+}
