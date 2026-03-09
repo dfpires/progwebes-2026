@@ -1,0 +1,26 @@
+body {
+    margin: 0; font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f6; color: #333;
+}
+.menu {
+    background-color: #1e3c72;  padding: 15px 0;
+    position: sticky; /* menu fica sempre no topo */
+    top: 0; /* posição 0 - posição acima */
+    z-index: 1000; /*  fica sempre por cima dos outros conteúdos */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* caixa com sombra */
+}
+.menu-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.menu-logo{
+    color: white; /* cor branca */
+    text-decoration: none; /* link sem estar sublinhado */
+    font-weight: bold; /* negrito */
+    font-size: 1.2rem; /* 1.2 * 16px */
+    text-transform: uppercase; /* letra maiúscula */
+}
