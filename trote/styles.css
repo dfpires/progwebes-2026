@@ -47,3 +47,8 @@ body {
     font-style: italic;
     color: #ffd700; 
 }
+.principal{
+    /* -40px subiu auto embaixo e 40 é na lateral */
+    max-width: 900px; margin: -40px auto 40px; padding: 20px;
+    
+}
