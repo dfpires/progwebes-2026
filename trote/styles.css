@@ -50,5 +50,29 @@ body {
 .principal{
     /* -40px subiu auto embaixo e 40 é na lateral */
     max-width: 900px; margin: -40px auto 40px; padding: 20px;
-    
+}
+section {
+  
+    background: white;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.importante {
+    display: flex;
+    gap: 20px;
+}
+.card-meta {
+   
+    flex: 1; background: #eef5ff; padding: 15px; border-left: 5px solid #2a5298;
+    border-radius: 8px;
+}
+.recompensas ul {
+    list-style: none;
+    padding: 0;
+}
+.recompensas li {
+    background: #e9f7ef; margin: 8px 0; padding: 10px;
+    border-radius: 5px; color: #27ae60; font-weight: bold;
 }
