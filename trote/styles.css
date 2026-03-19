@@ -76,3 +76,19 @@ section {
     background: #e9f7ef; margin: 8px 0; padding: 10px;
     border-radius: 5px; color: #27ae60; font-weight: bold;
 }
+.texto-introducao p {
+    line-height: 1.6; /* melhora a leitura de textos longos */
+    margin-bottom: 20px;
+    text-align: justify; /* alinhamento justificado - alinha à esquerda e à direta */
+}
+.lista-valores {
+    list-style: none;
+    padding: 0;
+}
+.lista-valores li {
+    background: #eef5ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #1e3c72;
+}
