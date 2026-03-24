@@ -110,3 +110,50 @@ th {
     border-radius: 4px;
     background: yellow;
 }
+
+/* aula 23-03 */
+.kit-container {
+     background-color: #fff8e1;
+    border: 2px dashed #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.lista-itens {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-itens li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #856404;
+}
+
+.suplementos {
+    border-left: 5px solid #ff4b2b;
+    background-color: #fff5f5;
+}
+
+/* Destaque para as Provas de Menção Honrosa */
+.memorias-facef, .acao-social, .album-figurinhas {
+    border-left: 5px solid #ffd700; /* Cor dourada para medalhas */
+    background-color: #fffdf0;
+}
+
+/* Estilização do Rodapé */
+footer {
+    background-color: #1e3c72; /* Azul escuro oficial do Uni-FACEF  */
+    color: white; /* Texto em branco para contraste */
+    text-align: center; /* Centraliza as informações de contato */
+    padding: 30px 20px; /* Espaçamento interno para não sufocar o texto */
+    margin-top: 50px; /* Afasta o rodapé do conteúdo principal (main) */
+    font-size: 0.85rem; /* Fonte levemente menor para hierarquia visual */
+    border-top: 4px solid #ffd700; /* Linha dourada discreta no topo do footer */
+}
+
+footer p {
+    margin: 8px 0; /* Espaçamento entre as linhas de texto */
+    opacity: 0.9; /* Deixa o texto suavemente menos brilhante que o menu */
+}
