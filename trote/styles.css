@@ -157,3 +157,42 @@ footer p {
     margin: 8px 0; /* Espaçamento entre as linhas de texto */
     opacity: 0.9; /* Deixa o texto suavemente menos brilhante que o menu */
 }
+
+.evento {
+    margin-bottom: 25px; /* espaçamento fora da borda de 25px */
+    position: relative; /* move o elemento HTML sem alterar elementos ao lado */
+}
+
+.evento::before { /* cria elemento fantasma - aparece como primeiro elemento */
+    content: '';
+    width: 12px; /* largura da bolinha */
+    height: 12px; /* altura da bolinha */
+    background: #ff4b2b; /* fundo da bolinha */
+    border-radius: 50%; /* borda da bolinha */
+    position: absolute; /* posição atual do elemento */
+    left: -28px; /* desloca para esquerda */
+    top: 5px; /* desloca para cima */
+}
+
+.timeline {
+     border-left: 3px solid #2a5298; /* borda à esquerda */
+     padding-left: 20px;
+     margin-top: 20px;
+}
+.grid-locais {
+     display: flex; /* fica um lado ao lado do outro - preenche na largura */
+     gap: 20px;
+}
+
+.unidade {
+    flex: 1; /* ocupa toda a área da div */
+    background: #f8f9fa; /* cor de fundo */
+    padding: 15px; /* espaçamento interno */
+    border-radius: 8px; /* raio da borda */
+    border: 1px solid #dee2e6; /* borda */
+}
+
+.unidade h4 {
+    color: #2a5298;
+    margin-top: 0;
+}
