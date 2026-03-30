@@ -22,44 +22,42 @@
             </div>
     </nav>
     <main class="principal">
-        <section>
-            <h3> 📅 Datas importantes </h3>
-            <div class="timeline">
-                <div class="evento">
-                    <strong> 24 de Fevereiro (18h15) </strong>
-                    <p> Abertura Oficial e Sorteio de Cores </p>
-                </div>
-                <div class="evento">
-                    <strong> 02 de Março </strong>    
-                    <p> Data limite para informar a entidade social escolhida </p>
-                </div>
-                <div class="evento">
-                    <strong> 24 de Março </strong>
-                    <p> Entrega de alimentos, Suplementos e Comprovantes </p>
-                </div>
-                <div class="evento">
-                    <strong> 27 de março </strong>
-                    <p> Noite de encerramento </p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h3> Onde entregar e onde participar </h3>
-            <div class="grid-locais">
-                <div class="unidade">
-                    <h4> Unidade 1 </h4>
-                    <p> Av. Major Nicácio, 2433 </p>
-                </div>
-                <div class="unidade">
-                    <h4> Unidade II </h4>
-                    <p> Av. Ismael Alonso Y Alonso, 2400 </p>
-                </div>
-            </div>
-        </section>
+       <section class="calculadora">
+        <h3> 🧮 Sumulador de Pontos </h3>
+        <div class="form-grid"> 
+            <div class="form-group">
+                <label> Arroz (5kg) - 10 pts </label> <!-- rótulo da caixa de entrada -->
+                <input type="number" id="qtdeArroz" min="0"> <!-- caixa de entrada -->
+            </div> 
+            <div class="form-group">
+                <label> Feijão (2kg) - 8 pts </label>
+                <input type="number" id="qtdeFeijao" min="0">
+            </div>       
+        </div>
+        <!-- quando este botão for clicado, a função calcular() será chamada no JavaScript -->
+        <button onclick="calcular()"> Calcular Total da Equipe </button> 
+        <div id="resultado" class="resultado-box">
+            Pontuação total: 0 pontos
+        </div>
+       </section>
     </main>
     <footer>
         <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br </p>
         <p>Uni-FACEF - Centro Universitário Municipal de Franca </p>
     </footer>
+    <script> <!-- programar JavaScript -->
+        function calcular(){
+            // JS é uma linguagem não tipada (sem tipo de dados)
+            // Number() é uma função que converte texto em número
+            // recupera o valor informado no elemento com id qtdeArroz
+            let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
+             // recupera o valor informado no elemento com id qtdeArroz
+            let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
+            // calcula o valor total de pontos
+            let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8)
+            // vamos exibir o resultado para o usuário
+            document.getElementById("resultado").innerText = "Pontuação total: " + pontos
+        }
+    </script>
 </body>
 </html>
