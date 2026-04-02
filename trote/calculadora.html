@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"> </script>
     <title>Provas e Metas - Trote 2026</title>
 </head>
 <body>
@@ -22,8 +23,29 @@
             </div>
     </nav>
     <main class="principal">
-       <section class="calculadora">
-        <h3> 🧮 Sumulador de Pontos </h3>
+       <section>
+            <h3> Simulador de Metas Batidas </h3>
+            <div>
+                <div class="form-group">
+                    <label> Kit de alimentação (60 kits)</label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="kitAlimentacao" min="0"> <!-- caixa de entrada -->
+                </div>
+                <div class="form-group">
+                    <label> Suplemento (30 latas) </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeLatas" min="0"> <!-- caixa de entrada -->
+                </div>  
+                <div class="form-group">
+                    <label> Leite (60 caixas) </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeLeites" min="0"> <!-- caixa de entrada -->
+                </div>
+                <div class="form-group">
+                    <label> Doação de sangue (30 doações) </label> <!-- rótulo da caixa de entrada -->
+                    <input type="number" id="qtdeDoacoes" min="0"> <!-- caixa de entrada -->
+                </div>  
+            </div>
+       </section> 
+       <section>
+        <h3> 🧮 Simulador de Pontos - Itens avulsos</h3>
         <div class="form-grid"> 
             <div class="form-group">
                 <label> Arroz (5kg) - 10 pts </label> <!-- rótulo da caixa de entrada -->
@@ -32,32 +54,28 @@
             <div class="form-group">
                 <label> Feijão (2kg) - 8 pts </label>
                 <input type="number" id="qtdeFeijao" min="0">
-            </div>       
+            </div> 
+            <div class="form-group">
+                <label> Óleo de Soja (900 Ml) - 4 pts </label>
+                <input type="number" id="qtdeOleo" min="0">
+            </div>     
+             <div class="form-group">
+                <label> Pacote de macarrão (500g) - 2 pts </label>
+                <input type="number" id="qtdeMacarrao" min="0">
+            </div>      
         </div>
-        <!-- quando este botão for clicado, a função calcular() será chamada no JavaScript -->
-        <button onclick="calcular()"> Calcular Total da Equipe </button> 
-        <div id="resultado" class="resultado-box">
-            Pontuação total: 0 pontos
-        </div>
+       </section>
+       <section>
+            <!-- quando este botão for clicado, a função calcular() será chamada no JavaScript -->
+            <button onclick="calcular()"> Calcular Total da Equipe </button> 
+            <div id="resultado" class="resultado-box">
+                Pontuação total: 0 pontos
+            </div>
        </section>
     </main>
     <footer>
         <p>Coordenação Trote Solidário 2026: trotesolidario@facef.br </p>
         <p>Uni-FACEF - Centro Universitário Municipal de Franca </p>
     </footer>
-    <script> <!-- programar JavaScript -->
-        function calcular(){
-            // JS é uma linguagem não tipada (sem tipo de dados)
-            // Number() é uma função que converte texto em número
-            // recupera o valor informado no elemento com id qtdeArroz
-            let qtdeArroz = Number(document.getElementById("qtdeArroz").value)
-             // recupera o valor informado no elemento com id qtdeArroz
-            let qtdeFeijao = Number(document.getElementById("qtdeFeijao").value)
-            // calcula o valor total de pontos
-            let pontos = (qtdeArroz * 10) + (qtdeFeijao * 8)
-            // vamos exibir o resultado para o usuário
-            document.getElementById("resultado").innerText = "Pontuação total: " + pontos
-        }
-    </script>
 </body>
 </html>
