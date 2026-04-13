@@ -18,33 +18,50 @@ function calcular(){
     // calcula o valor total das metas
     // recupera a cor da equipe
     let cor = document.getElementById("cor").value
-    let metaProva1 // declara a variável
+    let metaKit // declara meta de kit alimentação
+    let metaSuplemento // declaração meta de suplemento
     if (cor == "amarela"){
-        metaProva1 = 54
+        metaKit = 54
+        metaSuplemento = 27
     }
     else if (cor == "cinza"){
-        metaProva1 = 51
+        metaKit = 51
+        metaSuplemento = 26
     }
     else if (cor == "laranha"){
-        metaProva1 = 21
+        metaKit = 21
+        metaSuplemento = 11
     }
     else if (cor == "marron"){
-        metaProva1 = 88
+        metaKit = 88
+        metaSuplemento = 44
     }
     else if (cor == "preta"){
-        metaProva1 = 60
+        metaKit = 60
+        metaSuplemento = 30
     }
-
+    // calcula pontuação do kit de alimentação
     let kitAlimentacao = Number(document.getElementById("kitAlimentacao").value)
-    if (kitAlimentacao >= metaProva1) {
+    if (kitAlimentacao >= metaKit) {
         pontos = pontos + 5000 // já garantimos 5000
         if (kitAlimentacao > metaProva1){
             // ganhamos 83.33 a mais de ponto por itens que ultrapassaram 60
-            pontos = pontos + (kitAlimentacao - metaProva1) * (5000/metaProva1)
+            pontos = pontos + (kitAlimentacao - metaKit) * (5000/metaKit)
         }
     }
     else {
-        pontos = pontos + kitAlimentacao * (5000 / metaProva1)
+        pontos = pontos + kitAlimentacao * (5000 / metaKit)
+    }
+    // cacula pontuação do suplemento
+    let qtdeLatas = Number(document.getElementById("qtdeLatas").value)
+    if (qtdeLatas >= metaSuplemento){
+        pontos = pontos + 5000
+        if (qtdeLatas > metaSuplemento){
+            pontos = pontos + (qtdeLatas - metaSuplemento) * (5000/metaSuplemento)
+        }
+    }
+    else  {
+        pontos = pontos + (qtdeLatas * (5000/metaSuplemento))
     }
     // vamos exibir o resultado para o usuário
     document.getElementById("resultado").innerText = "Pontuação total: " + pontos + " pontos"
