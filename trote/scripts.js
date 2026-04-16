@@ -42,7 +42,7 @@ function calcular(){
         metaSuplemento = metaKit / 2
     }
     else { // ímpar
-        metaSuplemento = (metaKit / 2) + 1
+        metaSuplemento = (metaKit / 2) + 0.5
     }
     // calcula a meta da doação de sangue
     let metaSangue = metaSuplemento

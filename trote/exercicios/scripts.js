@@ -6,3 +6,12 @@ function churras(){
     document.getElementById("resultadoCarne").innerText = 
             "Total em kg " + totalKg.toFixed(2)
 }
+function febre(){
+    let temperatura = Number(document.getElementById("temperatura").value)
+    if (temperatura >= 37.5){
+        document.getElementById("resultadoFebre").innerText = "Está com febre"
+    }
+    else {
+        document.getElementById("resultadoFebre").innerText = "Temperatura normal"
+    }
+}
